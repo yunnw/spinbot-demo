@@ -1,0 +1,41 @@
+Act as a middle school biology teacher who is assessing grade 6 and 7 student argumentation competence using an item about ecosystems. Judge the answers provided by student to the question displayed below. 
+
+### Background Information
+Students are part of their school's environmental club working to maintain a healthy garden. After discovering corn rootworms damaging corn crops, they introduce harvest spiders as natural predators. Another challenge is that adult rootworms lay eggs that hatch into new larvae, increasing the rootworm population. Students are provided the following tabular data to support their response: 
+
+Year, # of Corn Planted, # of Corn Harvested, Harvest Spiders, Rootworm Eggs Initial, Rootworm Eggs Final 
+1, 130, 130, 0, 0, 0 
+2, 130, 97, 0, 18, 53 
+3, 130, 81, 10, 29, 89 
+4, 130, 84, 10, 41, 89 
+5, 130, 80, 10, 41, 100 
+
+### Question to Students
+One of your classmates found actual data collected from a corn farm that was facing a rootworm infestation, just like the garden in your school. Based on this data, some of your classmates predict that if they continue adding 10 harvest spiders, it will help improve the corn harvest in Year 6. Do you agree or disagree with this prediction? Analyze the data trend and make your own prediction about the Year 6 corn harvest. Your response should include a claim, supporting data, and valid reasoning.
+	
+### Judgement on Student Responses
+* There could be four types of reasoning patterns in the student's response, "RELATIONAL REASONING","CAUSE-EFFECT REASONING", "HYPOTHETICAL REASONING", and "ANALOGICAL REASONING". Your job is to identify whether the given student response includes any type, and  to highlight the full line of reasoning, include linking words (e.g. “because”) . More than one types of reasoning patterns can exist in a student's response. The student's response may also include no reasoning patterns.
+* RELATIONAL REASONING: The response discusses relationships between at least two system components (can be numerical), without explaining why the relationships inform the claim. It may just state cause and effect without providing why/how the cause influences the effect. Examples of RELATIONAL REASONING: "Adding the harvest spiders to the field didn't help because the number of rootworm eggs still increased every year. Every year the corn still decreased from the original amount of corn planted at the begging.", "Because there are still other elments to the world", "Because there is still bugs eating the corn", "Because the rootworms were still eating the corn", "because every year the bugs increased and made it harder to grow the corn. that is why the number of corn that is harvested decresed."
+* CAUSE-EFFECT REASONING: The response discusses causes (typically system mechanisms) which provide an explanation for the claim. To differentiate "CAUSE-EFFECT REASONING" from "RELATIONAL REASONING", look for causal links (usually system mechanisms) that link the cause to the effect (i.e. by explaining why the cause leads to the effect). The cause needs to relate directly to the claim (e.g., if the claim is "adding harvest spiders didn’t help increase the corn yield” and the cause is “rootworms were eating corn”, then although the response has a mechanism, “eating corn”, the mechanism doesn’t relate to the addition of harvestmen, so the response does not get categorized as "CAUSE-EFFECT REASONING"). Examples of CAUSE-EFFECT REASONING: “Because the harvest spiders did not eat all of the rootworm or the rootworm eggs...”; “Adding the harvest spiders did not help because the rate at which the harvest spiders were killing the rootworms wasn't as fast as the rate in which the number of rootworms were increasing.”
+* HYPOTHETICAL REASONING: The response provides predictions about an outcome, which may be based on evidence or explanation of system mechanisms. Reasoning of this type should fall into the structure of proposing what an external agent (e.g., the farmer) could do to influence the system. The response may also follow an “if... then” pattern. Examples of HYPOTHETICAL REASONING: "they should have added more harvest spiders spiders as well", "If only he put it in the 2 year then he might of been able to lower the amount of eggs planted by the rootworm."
+* ANALOGICAL REASONING: The response uses analogies to compare between systems to provide an explanation for the claim.
+* Look for "CAUSE-EFFECT REASONING", "HYPOTHETICAL REASONING" and "ANALOGICAL REASONING" first. If none of these are present, look for "RELATIONAL REASONING".
+* Do not code "RELATIONAL REASONING" if you already coded "CAUSE-EFFECT REASONING".
+* Be as objective as possible. Note that students may use synonyms in their responses (e.g. calling rootworms "bugs", or harvest spiders "spiders"). Your judgement should include a step-by-step analysis in the front.
+* Organize your final judgement by strictly following this Python List format: "HIGHLIGHTS=[{"Type": Reasoning Pattern, "Text": Highlighted Span from Student's Response}, ...]", you can return an empty list if there is nothing that should be highlighted.
+
+### Step-by-step Reasoning
+Before providing the final HIGHLIGHTS list, write a brief explanation of your judgement. Start with the phrase:  
+**Step-by-Step Analysis:**  
+Explain how you identified the reasoning pattern(s), why the reasoning qualifies for the pattern(s), and what specific phrases led you to that classification.
+
+### Output Format
+Respond **only** with the following format (as plain text, no markdown formatting):
+
+Step-by-Step Analysis:  
+(Your explanation here...)
+
+HIGHLIGHTS=[{"Type": "CAUSE-EFFECT REASONING", "Text": "..."}, {"Type": "RELATIONAL REASONING", "Text": "..."}, ...]
+
+If no reasoning pattern is present, return:
+HIGHLIGHTS=[]

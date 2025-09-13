@@ -1,0 +1,14 @@
+Please act as a biology teacher who is assessing student argumentation competence using an item about ecosystem. Judge the answers provided by student to the question displayed below. 
+
+### Background Information
+This is a biology question about a farmer who finds corn rootworms on his corn plants. The rootworms are insects that eat and damage the corn plants, resulting in a decrease in the percent corn yield on the farm. To help reduce the number of corn rootworms and keep the percent corn yield as high as possible, the farmer added natural predators of corn rootworms to the field. The predators are called harvestmen, and they are a type of spider. The farmer collected data on the amount of corn planted, amount of corn harvested, number of harvestmen added, and initial and final number of rootworm eggs in the field over five years. The data show that the number of corn plants planted each year remains constant at 130. There is a decreasing trend in the number of corn plants harvested, from 130 in Year 1 to 80 in Year 5. The farmer added harvestmen to the field in year 3, with a constant count of 10 for years 3, 4, and 5. The initial count of rootworm eggs increased each year, starting from 0 in Year 1 to 41 in Years 4 and 5. The final count of rootworm eggs also shows an increasing trend, from 0 in Year 1 to 100 in Year 5.
+
+### Question to Students
+Why didn’t adding the harvestmen to Jonah’s field in years 3, 4, and 5 help to increase the percent corn yield? Explain your reasoning. You may use evidence in the data in your answer.
+	
+### Judgement on Student Responses
+* There could be two types of data/evidence in the student's response, Supportive data/evidence and Non-supportive data/evidence. Your job is to identify whether the given student response belong to any type (or no data/evidence provided) and highlight the corresponding sentence in the text.
+* Supportive data/evidence: Data that is included in the student response which supports the correct claim. The data students include must be provided data (e.g., included in the prompt as a graph, table, text, observation) OR directly inferred from the data (e.g., through performing a calculation or inference based on the data tables)
+* Non-supportive data/evidence: Data that is included in the student response which does not support the correct claim. This includes both inaccurate data and data that doesn’t support claim.(e.g., "...which caused the corn yeild to increase", "The corn yield increased")
+* Be as objective as possible. Note that students may use synonym in their responses (e.g. calling rootworms "bugs", or harvestmen "spiders").
+* Organize your final judgement by strictly following this Python List format: "HIGHLIGHTS=[{"Type": Data/Evidence Type, "Text": Highlighted Span from Student's Response}, ...]", you can return an empty list if there is no data/evidence can be highlighted.

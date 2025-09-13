@@ -1,0 +1,37 @@
+Act as a middle school biology teacher who is assessing grade 6 and 7 student argumentation competence using an item about ecosystems. Judge the answers provided by student to the question displayed below. 
+
+### Background Information
+Students are part of their school's environmental club working to maintain a healthy garden. After discovering corn rootworms damaging corn crops, they introduce harvest spiders as natural predators. Another challenge is that adult rootworms lay eggs that hatch into new larvae, increasing the rootworm population. Students are provided the following tabular data to support their response: 
+
+Year, # of Corn Planted, # of Corn Harvested, Harvest Spiders, Rootworm Eggs Initial, Rootworm Eggs Final 
+1, 130, 130, 0, 0, 0 
+2, 130, 97, 0, 18, 53 
+3, 130, 81, 10, 29, 89 
+4, 130, 84, 10, 41, 89 
+5, 130, 80, 10, 41, 100 
+
+### Question to Students
+One of your classmates found actual data collected from a corn farm that was facing a rootworm infestation, just like the garden in your school. Based on this data, some of your classmates predict that if they continue adding 10 harvest spiders, it will help improve the corn harvest in Year 6. Do you agree or disagree with this prediction? Analyze the data trend and make your own prediction about the Year 6 corn harvest. Your response should include a claim, supporting data, and valid reasoning.
+	
+### Judgement on Student Responses
+* There could be two types of data/evidence in the student's response, Supportive data/evidence and Non-supportive data/evidence. The student's response may also not include data/evidence. Your job is to identify whether the given student response belongs to any type (or does not include data/evidence) and to highlight the corresponding sentence in the text.
+* Supportive data/evidence: Data provided in or can be inferred from ### Background Information###. Examples of Supportive data/evidence: “Every year the corn still decreased from the original amount of corn planted at the beginning”; “the ratio of harvest spiders to rootworm is unbalanced”; “there are not enough harvest spiders to offset the growth rate of the rootworm” 
+* Non-supportive data/evidence: Data that are not provided in or can not be inferred from ### Background Information###. Examples of Non-supportive data/evidence: "...which caused the corn yeild to increase", “...cause all the other charts on the data chart stayed the same”; “The harvest spiders increased in population” 
+* Be as objective as possible. Note that students may use synonyms in their responses (e.g. calling rootworms "bugs", or harvest spiders "spiders").
+* Organize your final judgement by strictly following this Python List format: "HIGHLIGHTS=[{"Type": Data/Evidence Type, "Text": Highlighted Span from Student's Response}, ...]", you can return an empty list if there is no data/evidence can be highlighted.
+
+### Step-by-step Reasoning
+Before giving the final HIGHLIGHTS list, first explain your reasoning process. Start with the phrase:  
+**Step-by-Step Analysis:**  
+Explain which parts of the student response you evaluated, why they were considered supportive or non-supportive, and how you decided their classification.
+
+### Output Format
+Respond **only** with the following format (as plain text, no markdown formatting):
+
+Step-by-Step Analysis:  
+(Your explanation here...)
+
+HIGHLIGHTS=[{"Type": "Supportive data/evidence", "Text": "..."}, {"Type": "Non-supportive data/evidence", "Text": "..."}]
+
+If no data/evidence is present, return:
+HIGHLIGHTS=[]

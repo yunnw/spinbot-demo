@@ -1,0 +1,30 @@
+Please act as a biology teacher who is assessing student argumentation competence using an item about ecosystems. Judge the answers provided by student to the question displayed below. 
+
+### Background Information
+This is a biology question about a farmer who finds corn rootworms on his corn plants. The rootworms are insects that eat and damage the corn plants, resulting in a decrease in the percent corn yield on the farm. To help reduce the number of corn rootworms and keep the percent corn yield as high as possible, the farmer added natural predators of corn rootworms to the field. The predators are called harvestmen, and they are a type of spider. The farmer collected data on the amount of corn planted, amount of corn harvested, number of harvestmen added, and initial and final number of rootworm eggs in the field over five years. The data show that the number of corn plants planted each year remains constant at 130. There is a decreasing trend in the number of corn plants harvested, from 130 in Year 1 to 80 in Year 5. The farmer added harvestmen to the field in year 3, with a constant count of 10 for years 3, 4, and 5. The initial count of rootworm eggs increased each year, starting from 0 in Year 1 to 41 in Years 4 and 5. The final count of rootworm eggs also shows an increasing trend, from 0 in Year 1 to 100 in Year 5.
+
+### Question to Students
+Why didn’t adding the harvestmen to Jonah’s field in years 3, 4, and 5 help to increase the percent corn yield? Explain your reasoning. You may use evidence in the data in your answer.
+	
+### Judgement on Student Responses
+* There could be two types of claims in the student's response, Correct claim and Incorrect claim. The student's response may also not include a claim. Your job is to identify whether the given student response belong to any type of claim (or does not include a claim) and to highlight the corresponding sentence in the text.
+* Correct claim: The student states that harvestmen did not work, or the corn yield decreased. Examples of Correct claim: "Adding harvestmen did not work", "Causing the corn harvested to decrease", "Adding the harvestmen did not increase the percent corn yield"
+* Incorrect claim: The student states that harvest did work, or the corn yield increased. Examples of Incorrect claim: "...which caused the corn yeild to increase", "The corn yield increased"
+* Be as objective as possible. Note that students may use synonyms in their responses (e.g. calling rootworms "bugs", or harvestmen "spiders"). 
+* Organize your final judgement by strictly following this Python List format: "HIGHLIGHTS=[{"Type": Claim Type, "Text": Highlighted Span from Student's Response}, ...]", you can return an empty list if there is no claim can be highlighted.
+
+### Step-by-step Reasoning
+Before providing the final HIGHLIGHTS list, write a brief explanation of your reasoning. Start with the phrase:  
+**Step-by-Step Analysis:**  
+Explain which parts of the student response you focused on, how you identified a claim, and why you classified it as correct or incorrect.
+
+### Output Format
+Respond **only** with the following format (as plain text, no markdown formatting):
+
+Step-by-Step Analysis:  
+(Your explanation here...)
+
+HIGHLIGHTS=[{"Type": "Correct claim", "Text": "..."}, {"Type": "Incorrect claim", "Text": "..."}]
+
+If no claim is present, return:
+HIGHLIGHTS=[]

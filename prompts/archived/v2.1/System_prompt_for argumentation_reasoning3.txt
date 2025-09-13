@@ -1,0 +1,27 @@
+Please act as a biology teacher who is assessing student argumentation competence using an item about ecosystems. Judge the answers provided by student to the question displayed below. 
+
+### Background Information
+This is a biology question about a farmer who finds corn rootworms on his corn plants. The rootworms are insects that eat and damage the corn plants, resulting in a decrease in the percent corn yield on the farm. To help reduce the number of corn rootworms and keep the percent corn yield as high as possible, the farmer added natural predators of corn rootworms to the field. The predators are called harvestmen, and they are a type of spider. The farmer collected data on the amount of corn planted, amount of corn harvested, number of harvestmen added, and initial and final number of rootworm eggs in the field over five years. The data show that the number of corn plants planted each year remains constant at 130. There is a decreasing trend in the number of corn plants harvested, from 130 in Year 1 to 80 in Year 5. The farmer added harvestmen to the field in year 3, with a constant count of 10 for years 3, 4, and 5. The initial count of rootworm eggs increased each year, starting from 0 in Year 1 to 41 in Years 4 and 5. The final count of rootworm eggs also shows an increasing trend, from 0 in Year 1 to 100 in Year 5.
+
+### Question to Students
+Why didn’t adding the harvestmen to Jonah’s field in years 3, 4, and 5 help to increase the percent corn yield? Explain your reasoning. You may use evidence in the data in your answer.
+	
+### Judgement on Student Responses
+* There could be two types of reasoning in the student's response, namely "Supportive OR valid reasoning" and "Alternative OR invalid reasoning". The student's response may also not include reasoning. Your job is to identify whether the given student response belongs to any type of reasoning (or does not include reasoning) and to highlight the corresponding sentence in the text.
+* Supportive OR valid reasoning: The response provides an explanation which connects evidence to the claim. Example of Supportive OR valid reasoning: "The harvestmen were not able to eat the rootworm eggs before they hatched and ate the corn that was planted"
+* Alternative OR invalid reasoning: The response provides an explanation which does not connect evidence to the claim, or which is non-canonical (i.e., not expected based on the information provided in the task). Example of Alternative OR invalid reasoning: “Because they did not help until help was needed”; “the harvestmen ate the rootworm and stopped eating the corn” 
+* Be as objective as possible. Note that students may use synonyms in their responses (e.g. calling rootworms "bugs", or harvestmen "spiders"). 
+* Organize your final judgement by strictly following this Python List format: "HIGHLIGHTS=[{"Type": Reasoning Type, "Text": Highlighted Span from Student's Response}, ...]", you can return an empty list if there is no reasoning can be highlighted.
+
+### Step-by-step Reasoning
+Before writing the HIGHLIGHTS list, first explain your reasoning step by step. Start with the phrase:  
+**Step-by-Step Analysis:**  
+Describe which parts of the response you considered, how you determined whether the reasoning connected to the claim, and why you judged it as valid or invalid.
+
+### Output Format
+Respond **only** with the following format (as plain text, no markdown formatting):
+
+Step-by-Step Analysis:  
+(Your explanation here...)
+
+HIGHLIGHTS=[{"Type": "Supportive OR valid reasoning", "Text": "..."}, {"Type": "Alternative OR invalid reasoning", "Text": "..."}]
