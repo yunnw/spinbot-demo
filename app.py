@@ -11,6 +11,8 @@ AZURE_ENDPOINT = st.secrets["AZURE_ENDPOINT"]
 AZURE_DEPLOYMENT = st.secrets["AZURE_DEPLOYMENT"]
 AZURE_API_VERSION = st.secrets["AZURE_API_VERSION"]
 
+SHOW_CHAT_INPUT = False
+
 ArgLabel = {"1. Correct claim": 1, "2. Incorrect claim": 2,
             "3. Supportive Data/Evidence": 3, "4. Non-supportive Data/Evidence": 4,
             "5. Supportive OR valid reasoning": 5, "6. Alternative OR invalid reasoning": 6}
@@ -263,7 +265,7 @@ with right:
     st.button("Get Feedback", type="primary", on_click=on_get_feedback)
 
 
-if st.session_state.get("chat_open", False):
+if SHOW_CHAT_INPUT and st.session_state.get("chat_open", False):
     user_msg = st.chat_input("Type your message here")
     if user_msg:
         clean_msg = user_msg.strip()
@@ -271,7 +273,6 @@ if st.session_state.get("chat_open", False):
         with st.spinner("Spin-Bot is thinking…"):
             action, bot_text = chat_router(clean_msg, st.session_state.chat_history, FINAL_PAGE_DESC)
             if action == "EVAL":
-                # 只有需要“整段评估”时，才跑你那套并行组件→反馈
                 _, bot_text = spinbot_pipeline(clean_msg, st.session_state.chat_history)
         st.session_state.chat_history.append(("assistant", bot_text.strip().strip('“”"')))
         st.rerun()
