@@ -11,8 +11,6 @@ AZURE_ENDPOINT = st.secrets["AZURE_ENDPOINT"]
 AZURE_DEPLOYMENT = st.secrets["AZURE_DEPLOYMENT"]
 AZURE_API_VERSION = st.secrets["AZURE_API_VERSION"]
 
-SHOW_CHAT_INPUT = False
-
 ArgLabel = {"1. Correct claim": 1, "2. Incorrect claim": 2,
             "3. Supportive Data/Evidence": 3, "4. Non-supportive Data/Evidence": 4,
             "5. Supportive OR valid reasoning": 5, "6. Alternative OR invalid reasoning": 6}
@@ -265,7 +263,7 @@ with right:
     st.button("Get Feedback", type="primary", on_click=on_get_feedback)
 
 
-if SHOW_CHAT_INPUT and st.session_state.get("chat_open", False):
+if st.session_state.get("chat_open", False):
     user_msg = st.chat_input("Type your message here")
     if user_msg:
         clean_msg = user_msg.strip()
