@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Final Argument MVP", layout="wide")
+st.set_page_config(page_title="SPIN-Bot Final Argument Demo", layout="wide")
 
 # ========= Azure Configuration =========
 AZURE_API_KEY = st.secrets["AZURE_API_KEY"]
